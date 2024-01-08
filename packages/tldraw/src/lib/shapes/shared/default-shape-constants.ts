@@ -11,34 +11,50 @@ export const TEXT_PROPS = {
 
 /** @public */
 export const STROKE_SIZES: Record<TLDefaultSizeStyle, number> = {
-	s: 2,
-	m: 3.5,
-	l: 5,
-	xl: 10,
+	// s: 2,
+	// m: 3.5,
+	// l: 5,
+	// xl: 10,
+	s: 5,
+	m: 10,
+	l: 15,
+	xl: 20,
 }
 
 /** @public */
 export const FONT_SIZES: Record<TLDefaultSizeStyle, number> = {
+	// s: 18,
+	// m: 24,
+	// l: 36,
+	// xl: 44,
 	s: 18,
-	m: 24,
-	l: 36,
-	xl: 44,
+	m: 36,
+	l: 54,
+	xl: 72,
 }
 
 /** @public */
 export const LABEL_FONT_SIZES: Record<TLDefaultSizeStyle, number> = {
+	// s: 18,
+	// m: 22,
+	// l: 26,
+	// xl: 32,
 	s: 18,
-	m: 22,
-	l: 26,
-	xl: 32,
+	m: 36,
+	l: 54,
+	xl: 72,
 }
 
 /** @public */
 export const ARROW_LABEL_FONT_SIZES: Record<TLDefaultSizeStyle, number> = {
+	// s: 18,
+	// m: 20,
+	// l: 24,
+	// xl: 28,
 	s: 18,
-	m: 20,
-	l: 24,
-	xl: 28,
+	m: 36,
+	l: 54,
+	xl: 72,
 }
 
 /** @public */

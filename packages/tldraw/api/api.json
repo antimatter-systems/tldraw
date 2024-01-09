@@ -1227,7 +1227,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        color: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        color: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -1236,7 +1236,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        fill: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        fill: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -3561,7 +3561,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        fill: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        fill: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -7065,7 +7065,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ") => {\n        props: {\n            growY: number;\n            geo: \"arrow-down\" | \"arrow-left\" | \"arrow-right\" | \"arrow-up\" | \"check-box\" | \"cloud\" | \"diamond\" | \"ellipse\" | \"hexagon\" | \"octagon\" | \"oval\" | \"pentagon\" | \"rectangle\" | \"rhombus-2\" | \"rhombus\" | \"star\" | \"trapezoid\" | \"triangle\" | \"x-box\";\n            labelColor: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            fill: \"none\" | \"pattern\" | \"semi\" | \"solid\";\n            dash: \"dashed\" | \"dotted\" | \"draw\" | \"solid\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            w: number;\n            h: number;\n            text: string;\n        };\n        type: \"geo\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
+                  "text": ") => {\n        props: {\n            growY: number;\n            geo: \"arrow-down\" | \"arrow-left\" | \"arrow-right\" | \"arrow-up\" | \"check-box\" | \"cloud\" | \"diamond\" | \"ellipse\" | \"hexagon\" | \"octagon\" | \"oval\" | \"pentagon\" | \"rectangle\" | \"rhombus-2\" | \"rhombus\" | \"star\" | \"trapezoid\" | \"triangle\" | \"x-box\";\n            labelColor: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            fill: \"none\" | \"pattern\" | \"semi\" | \"solid\";\n            dash: \"dashed\" | \"dotted\" | \"draw\" | \"solid\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            w: number;\n            h: number;\n            text: string;\n        };\n        type: \"geo\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -7140,7 +7140,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ") => {\n        props: {\n            growY: number;\n            geo: \"arrow-down\" | \"arrow-left\" | \"arrow-right\" | \"arrow-up\" | \"check-box\" | \"cloud\" | \"diamond\" | \"ellipse\" | \"hexagon\" | \"octagon\" | \"oval\" | \"pentagon\" | \"rectangle\" | \"rhombus-2\" | \"rhombus\" | \"star\" | \"trapezoid\" | \"triangle\" | \"x-box\";\n            labelColor: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            fill: \"none\" | \"pattern\" | \"semi\" | \"solid\";\n            dash: \"dashed\" | \"dotted\" | \"draw\" | \"solid\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            w: number;\n            h: number;\n            text: string;\n        };\n        type: \"geo\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
+                  "text": ") => {\n        props: {\n            growY: number;\n            geo: \"arrow-down\" | \"arrow-left\" | \"arrow-right\" | \"arrow-up\" | \"check-box\" | \"cloud\" | \"diamond\" | \"ellipse\" | \"hexagon\" | \"octagon\" | \"oval\" | \"pentagon\" | \"rectangle\" | \"rhombus-2\" | \"rhombus\" | \"star\" | \"trapezoid\" | \"triangle\" | \"x-box\";\n            labelColor: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            fill: \"none\" | \"pattern\" | \"semi\" | \"solid\";\n            dash: \"dashed\" | \"dotted\" | \"draw\" | \"solid\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            w: number;\n            h: number;\n            text: string;\n        };\n        type: \"geo\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -7396,7 +7396,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        color: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        color: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -7405,7 +7405,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        fill: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        fill: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -8804,7 +8804,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        size: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        size: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -10667,7 +10667,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        dash: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        dash: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -11734,7 +11734,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ") => {\n        props: {\n            growY: number;\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            text: string;\n        };\n        type: \"note\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
+                  "text": ") => {\n        props: {\n            growY: number;\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            text: string;\n        };\n        type: \"note\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -11809,7 +11809,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ") => {\n        props: {\n            growY: number;\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            text: string;\n        };\n        type: \"note\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
+                  "text": ") => {\n        props: {\n            growY: number;\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            verticalAlign: \"end\" | \"middle\" | \"start\";\n            url: string;\n            text: string;\n        };\n        type: \"note\";\n        x: number;\n        y: number;\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -11919,7 +11919,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        size: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        size: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -13325,7 +13325,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ";\n        isLocked: boolean;\n        opacity: number;\n        props: {\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            w: number;\n            text: string;\n            scale: number;\n            autoSize: boolean;\n        };\n        meta: import(\"@tldraw/editor\")."
+                  "text": ";\n        isLocked: boolean;\n        opacity: number;\n        props: {\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            w: number;\n            text: string;\n            scale: number;\n            autoSize: boolean;\n        };\n        meta: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -13391,7 +13391,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ") => {\n        x: number;\n        y: number;\n        props: {\n            w: number;\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            text: string;\n            scale: number;\n            autoSize: boolean;\n        };\n        type: \"text\";\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
+                  "text": ") => {\n        x: number;\n        y: number;\n        props: {\n            w: number;\n            color: \"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\";\n            size: \"l\" | \"m\" | \"s\" | \"xl\";\n            font: \"draw\" | \"mono\" | \"sans\" | \"serif\";\n            align: \"end-legacy\" | \"end\" | \"middle-legacy\" | \"middle\" | \"start-legacy\" | \"start\";\n            text: string;\n            scale: number;\n            autoSize: boolean;\n        };\n        type: \"text\";\n        rotation: number;\n        index: string;\n        parentId: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",
@@ -13602,7 +13602,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n        size: import(\"@tldraw/editor\")."
+                  "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n        size: import(\"@tldraw/editor\")."
                 },
                 {
                   "kind": "Reference",

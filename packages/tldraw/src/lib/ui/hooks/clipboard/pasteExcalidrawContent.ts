@@ -418,7 +418,8 @@ const fontFamilyToFontType: Record<number, TLDefaultFontStyle> = {
 }
 
 const colorsToColors: Record<string, TLDefaultColorStyle> = {
-	'#ffffff': 'grey',
+	// '#ffffff': 'grey',
+	'#ffffff': 'white',
 	// Strokes
 	'#000000': 'black',
 	'#343a40': 'black',

@@ -256,7 +256,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    color: import(\"../styles/StyleProp\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    color: import(\"../styles/StyleProp\")."
             },
             {
               "kind": "Reference",
@@ -265,7 +265,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    fill: import(\"../styles/StyleProp\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    fill: import(\"../styles/StyleProp\")."
             },
             {
               "kind": "Reference",
@@ -1315,7 +1315,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">"
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">"
             }
           ],
           "fileUrlPath": "packages/tlschema/src/styles/TLColorStyle.ts",
@@ -1644,7 +1644,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    fill: import(\"..\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    fill: import(\"..\")."
             },
             {
               "kind": "Reference",
@@ -2049,7 +2049,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    color: import(\"../styles/StyleProp\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    color: import(\"../styles/StyleProp\")."
             },
             {
               "kind": "Reference",
@@ -2058,7 +2058,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    fill: import(\"../styles/StyleProp\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    fill: import(\"../styles/StyleProp\")."
             },
             {
               "kind": "Reference",
@@ -2268,7 +2268,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    size: import(\"..\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    size: import(\"..\")."
             },
             {
               "kind": "Reference",
@@ -2720,7 +2720,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    dash: import(\"../styles/StyleProp\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    dash: import(\"../styles/StyleProp\")."
             },
             {
               "kind": "Reference",
@@ -2829,7 +2829,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    size: import(\"..\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    size: import(\"..\")."
             },
             {
               "kind": "Reference",
@@ -3568,7 +3568,7 @@
             },
             {
               "kind": "Content",
-              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"yellow\">;\n    size: import(\"..\")."
+              "text": "<\"black\" | \"blue\" | \"green\" | \"grey\" | \"light-blue\" | \"light-green\" | \"light-grey\" | \"light-red\" | \"light-violet\" | \"orange\" | \"red\" | \"violet\" | \"white\" | \"yellow\">;\n    size: import(\"..\")."
             },
             {
               "kind": "Reference",

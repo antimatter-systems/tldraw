@@ -2,17 +2,33 @@ import { Expand } from '@tldraw/utils'
 import { T } from '@tldraw/validate'
 import { StyleProp } from './StyleProp'
 
+// const colors = [
+// 	'black',
+// 	'grey',
+// 	'light-violet',
+// 	'violet',
+// 	'blue',
+// 	'light-blue',
+// 	'yellow',
+// 	'orange',
+// 	'green',
+// 	'light-green',
+// 	'light-red',
+// 	'red',
+// ] as const
 const colors = [
 	'black',
 	'grey',
-	'light-violet',
+	'light-grey',
+	'white',
+	'light-violet', // unused
 	'violet',
 	'blue',
 	'light-blue',
+	'light-green', // unused
+	'green',
 	'yellow',
 	'orange',
-	'green',
-	'light-green',
 	'light-red',
 	'red',
 ] as const
@@ -58,6 +74,15 @@ export const DefaultColorThemePalette: {
 				p3: 'color(display-p3 0.972 0.8705 0.05)',
 			},
 		},
+		white: {
+			solid: '#e1e1e1',
+			semi: '#2c3036',
+			pattern: '#989898',
+			highlight: {
+				srgb: '#d2b700',
+				p3: 'color(display-p3 0.8078 0.7225 0.0312)',
+			},
+		},
 		blue: {
 			solid: '#4263eb',
 			semi: '#dce1f8',
@@ -76,13 +101,22 @@ export const DefaultColorThemePalette: {
 				p3: 'color(display-p3 0.2536 0.984 0.7981)',
 			},
 		},
-		grey: {
+		'light-grey': {
 			solid: '#adb5bd',
 			semi: '#eceef0',
 			pattern: '#bcc3c9',
 			highlight: {
 				srgb: '#cbe7f1',
 				p3: 'color(display-p3 0.8163 0.9023 0.9416)',
+			},
+		},
+		grey: {
+			solid: '#93989f',
+			semi: '#33373c',
+			pattern: '#7c8187',
+			highlight: {
+				srgb: '#9cb4cb',
+				p3: 'color(display-p3 0.6299 0.7012 0.7856)',
 			},
 		},
 		'light-blue': {
@@ -163,8 +197,16 @@ export const DefaultColorThemePalette: {
 		text: '#f8f9fa',
 		background: '#212529',
 		solid: '#28292e',
-
 		black: {
+			solid: '#1d1d1d',
+			semi: '#e8e8e8',
+			pattern: '#494949',
+			highlight: {
+				srgb: '#fddd00',
+				p3: 'color(display-p3 0.972 0.8705 0.05)',
+			},
+		},
+		white: {
 			solid: '#e1e1e1',
 			semi: '#2c3036',
 			pattern: '#989898',
@@ -198,6 +240,15 @@ export const DefaultColorThemePalette: {
 			highlight: {
 				srgb: '#9cb4cb',
 				p3: 'color(display-p3 0.6299 0.7012 0.7856)',
+			},
+		},
+		'light-grey': {
+			solid: '#adb5bd',
+			semi: '#eceef0',
+			pattern: '#bcc3c9',
+			highlight: {
+				srgb: '#cbe7f1',
+				p3: 'color(display-p3 0.8163 0.9023 0.9416)',
 			},
 		},
 		'light-blue': {

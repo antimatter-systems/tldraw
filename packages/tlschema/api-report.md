@@ -29,8 +29,8 @@ export const arrowShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const arrowShapeProps: {
-    labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
+    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl">;
@@ -145,7 +145,7 @@ export function createTLSchema({ shapes }: {
 }): TLSchema;
 
 // @public (undocumented)
-export const DefaultColorStyle: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+export const DefaultColorStyle: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
 
 // @public (undocumented)
 export const DefaultColorThemePalette: {
@@ -187,7 +187,7 @@ export const drawShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const drawShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl">;
@@ -471,8 +471,8 @@ export const geoShapeMigrations: Migrations;
 // @public (undocumented)
 export const geoShapeProps: {
     geo: EnumStyleProp<"arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "check-box" | "cloud" | "diamond" | "ellipse" | "hexagon" | "octagon" | "oval" | "pentagon" | "rectangle" | "rhombus-2" | "rhombus" | "star" | "trapezoid" | "triangle" | "x-box">;
-    labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
+    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl">;
@@ -508,7 +508,7 @@ export const highlightShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const highlightShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl">;
     segments: T.ArrayOfValidator<{
         type: "free" | "straight";
@@ -662,7 +662,7 @@ export const lineShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const lineShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl">;
     spline: EnumStyleProp<"cubic" | "line">;
@@ -677,7 +677,7 @@ export const noteShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const noteShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
     align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
@@ -754,7 +754,7 @@ export const textShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const textShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-grey" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "white" | "yellow">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
     align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;

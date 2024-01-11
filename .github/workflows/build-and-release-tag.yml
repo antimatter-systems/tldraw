@@ -58,7 +58,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}  # Get upload URL from previous step
-          asset_path: packages/*.tgz  # Path to the assets to upload
-          asset_name: ${{ github.ref }}-${{ basename(asset_path) }}  # Optional custom asset names
-          asset_content_type: application/gzip
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: packages/*.tgz
+          asset_name: ${{ github.sha }}-${{ substring(asset_path, 10) }}

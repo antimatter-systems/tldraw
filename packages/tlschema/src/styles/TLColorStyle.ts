@@ -138,12 +138,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-red': {
-			solid: '#ff8787',
-			semi: '#f4dadb',
-			pattern: '#fe9e9e',
+			solid: '#D62E76',
+			semi: '#F4DADB',
+			pattern: '#E5598B',
 			highlight: {
-				srgb: '#ff7fa3',
-				p3: 'color(display-p3 0.9988 0.5301 0.6397)',
+				srgb: '#E5598B',
+				p3: 'color(display-p3 0.9 0.35 0.55)',
 			},
 		},
 		'light-violet': {
@@ -183,12 +183,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		yellow: {
-			solid: '#ffc078',
-			semi: '#f9f0e6',
-			pattern: '#fecb92',
+			solid: '#FCDA67',
+			semi: '#F9F0E6',
+			pattern: '#FECB92',
 			highlight: {
-				srgb: '#fddd00',
-				p3: 'color(display-p3 0.972 0.8705 0.05)',
+				srgb: '#FDDD00',
+				p3: 'color(display-p3 0.99 0.87 0)',
 			},
 		},
 	},
@@ -270,12 +270,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-red': {
-			solid: '#c67877',
-			semi: '#3b3235',
-			pattern: '#a56767',
+			solid: '#D62E76',
+			semi: '#F4DADB',
+			pattern: '#E5598B',
 			highlight: {
-				srgb: '#db005b',
-				p3: 'color(display-p3 0.7849 0.0585 0.3589)',
+				srgb: '#E5598B',
+				p3: 'color(display-p3 0.9 0.35 0.55)',
 			},
 		},
 		'light-violet': {
@@ -315,12 +315,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		yellow: {
-			solid: '#cba371',
-			semi: '#3c3934',
-			pattern: '#fecb92',
+			solid: '#FCDA67',
+			semi: '#F9F0E6',
+			pattern: '#FECB92',
 			highlight: {
-				srgb: '#d2b700',
-				p3: 'color(display-p3 0.8078 0.7225 0.0312)',
+				srgb: '#FDDD00',
+				p3: 'color(display-p3 0.99 0.87 0)',
 			},
 		},
 	},

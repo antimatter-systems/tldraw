@@ -41,23 +41,15 @@ jobs:
             mv "$package/package.tgz" "packages/$package_name.tgz"
           done
 
-      - name: Create a release
-        uses: actions/create-release@v1
+      - name: Create a release and upload assets
+        uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          files: packages/*.tgz
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          name: Release ${{ github.ref }}
           body: |
             Release for tag ${{ github.ref }}
           draft: false
           prerelease: false
-
-      - name: Upload release assets
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: packages/*.tgz
-          asset_name: ${{ github.sha }}-$(basename ${{ steps.create_release.outputs.asset_path }})

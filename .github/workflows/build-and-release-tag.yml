@@ -3,7 +3,7 @@ name: Build and release packages on tag
 on:
   create:
     tags:
-      - '*'  # Trigger on any new tag creation
+      - 'v*'  # Trigger on any new tag creation
 
 jobs:
   build-and-release:

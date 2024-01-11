@@ -93,12 +93,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		green: {
-			solid: '#099268',
-			semi: '#d3e9e3',
-			pattern: '#39a785',
+			solid: '#7BEA1F',
+			semi: '#D3E9E3',
+			pattern: '#9DC37D',
 			highlight: {
-				srgb: '#00ffc8',
-				p3: 'color(display-p3 0.2536 0.984 0.7981)',
+				srgb: '#00FF57',
+				p3: 'color(display-p3 0 1 0.34)',
 			},
 		},
 		'light-grey': {
@@ -138,6 +138,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-red': {
+			// Magenta
 			solid: '#D62E76',
 			semi: '#F4DADB',
 			pattern: '#E5598B',
@@ -165,6 +166,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		red: {
+			// Ketchup
 			solid: '#e03131',
 			semi: '#f4dadb',
 			pattern: '#e55959',
@@ -174,7 +176,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		violet: {
-			solid: '#ae3ec9',
+			solid: '#9625BF',
 			semi: '#ecdcf2',
 			pattern: '#bd63d3',
 			highlight: {
@@ -225,12 +227,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		green: {
-			solid: '#3b7b5e',
-			semi: '#253231',
-			pattern: '#366a53',
+			solid: '#7BEA1F',
+			semi: '#D3E9E3',
+			pattern: '#9DC37D',
 			highlight: {
-				srgb: '#009774',
-				p3: 'color(display-p3 0.0085 0.582 0.4604)',
+				srgb: '#00FF57',
+				p3: 'color(display-p3 0 1 0.34)',
 			},
 		},
 		grey: {
@@ -270,6 +272,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-red': {
+			// Magenta
 			solid: '#D62E76',
 			semi: '#F4DADB',
 			pattern: '#E5598B',
@@ -297,6 +300,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		red: {
+			// Ketchup
 			solid: '#aa3c37',
 			semi: '#36292b',
 			pattern: '#8f3734',
@@ -306,12 +310,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		violet: {
-			solid: '#873fa3',
-			semi: '#31293c',
-			pattern: '#763a8b',
+			solid: '#9625BF',
+			semi: '#ecdcf2',
+			pattern: '#bd63d3',
 			highlight: {
-				srgb: '#9e00ee',
-				p3: 'color(display-p3 0.5651 0.0079 0.8986)',
+				srgb: '#c77cff',
+				p3: 'color(display-p3 0.7469 0.5089 0.9995)',
 			},
 		},
 		yellow: {

@@ -41,8 +41,8 @@ apps/examples/www/index.js
 apps/examples/www/index.css
 nohup.out
 
-# packages/*/package
-# packages/*/*.tgz
+packages/*/package
+packages/*/*.tgz
 
 tsconfig.build.json
 .vercel

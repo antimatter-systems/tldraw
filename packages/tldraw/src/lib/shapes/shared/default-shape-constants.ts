@@ -15,10 +15,10 @@ export const STROKE_SIZES: Record<TLDefaultSizeStyle, number> = {
 	// m: 3.5,
 	// l: 5,
 	// xl: 10,
-	s: 5,
+	s: 2,
 	m: 10,
-	l: 15,
-	xl: 20,
+	l: 20,
+	xl: 30,
 }
 
 /** @public */

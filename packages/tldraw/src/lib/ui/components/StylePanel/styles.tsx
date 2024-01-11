@@ -29,8 +29,8 @@ export const STYLES = {
 		{ value: 'green', icon: 'color' },
 		{ value: 'yellow', icon: 'color' },
 		{ value: 'orange', icon: 'color' },
-		{ value: 'light-red', icon: 'color' },
 		{ value: 'red', icon: 'color' },
+		{ value: 'light-red', icon: 'color' },
 	],
 	fill: [
 		{ value: 'none', icon: 'fill-none' },

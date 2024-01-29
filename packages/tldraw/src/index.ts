@@ -29,6 +29,9 @@ export { LineShapeTool } from './lib/shapes/line/LineShapeTool'
 export { LineShapeUtil } from './lib/shapes/line/LineShapeUtil'
 export { NoteShapeTool } from './lib/shapes/note/NoteShapeTool'
 export { NoteShapeUtil } from './lib/shapes/note/NoteShapeUtil'
+export { createTextSvgElementFromSpans } from './lib/shapes/shared/createTextSvgElementFromSpans'
+export { resizeScaled } from './lib/shapes/shared/resizeScaled'
+export { useEditableText } from './lib/shapes/shared/useEditableText'
 export { TextShapeTool } from './lib/shapes/text/TextShapeTool'
 export { TextShapeUtil } from './lib/shapes/text/TextShapeUtil'
 export { VideoShapeUtil } from './lib/shapes/video/VideoShapeUtil'
@@ -170,5 +173,10 @@ export {
 	type TldrawFile,
 } from './lib/utils/tldr/file'
 export { Dialog, DropdownMenu }
+export { DEFAULT_SHAPE_CONSTANTS, DefaultStyleDefs }
 import * as Dialog from './lib/ui/components/primitives/Dialog'
 import * as DropdownMenu from './lib/ui/components/primitives/DropdownMenu'
+
+// Custom Exports
+import * as DEFAULT_SHAPE_CONSTANTS from './lib/shapes/shared/default-shape-constants'
+import * as DefaultStyleDefs from './lib/shapes/shared/defaultStyleDefs'

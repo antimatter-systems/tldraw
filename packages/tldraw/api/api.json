@@ -2366,6 +2366,112 @@
           "name": "copyAs"
         },
         {
+          "kind": "Function",
+          "canonicalReference": "@tldraw/tldraw!createTextSvgElementFromSpans:function(1)",
+          "docComment": "/**\n * Get an SVG element for a text shape.\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createTextSvgElementFromSpans(editor: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Editor",
+              "canonicalReference": "@tldraw/editor!Editor:class"
+            },
+            {
+              "kind": "Content",
+              "text": ", spans: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    text: string;\n    box: "
+            },
+            {
+              "kind": "Reference",
+              "text": "BoxModel",
+              "canonicalReference": "@tldraw/tlschema!BoxModel:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", opts: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    fontSize: number;\n    fontFamily: string;\n    textAlign: "
+            },
+            {
+              "kind": "Reference",
+              "text": "TLDefaultHorizontalAlignStyle",
+              "canonicalReference": "@tldraw/tlschema!TLDefaultHorizontalAlignStyle:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    verticalTextAlign: "
+            },
+            {
+              "kind": "Reference",
+              "text": "TLDefaultVerticalAlignStyle",
+              "canonicalReference": "@tldraw/tlschema!TLDefaultVerticalAlignStyle:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    fontWeight: string;\n    fontStyle: string;\n    lineHeight: number;\n    width: number;\n    height: number;\n    stroke?: string;\n    strokeWidth?: number;\n    fill?: string;\n    padding?: number;\n    offsetX?: number;\n    offsetY?: number;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "SVGTextElement",
+              "canonicalReference": "!SVGTextElement:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/createTextSvgElementFromSpans.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 13,
+            "endIndex": 14
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "editor",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "spans",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 6
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "opts",
+              "parameterTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 12
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "createTextSvgElementFromSpans"
+        },
+        {
           "kind": "Variable",
           "canonicalReference": "@tldraw/tldraw!DEFAULT_ACCEPTED_IMG_TYPE:var",
           "docComment": "/**\n * @public\n */\n",
@@ -2410,6 +2516,226 @@
             "startIndex": 1,
             "endIndex": 2
           }
+        },
+        {
+          "kind": "Namespace",
+          "canonicalReference": "@tldraw/tldraw!DEFAULT_SHAPE_CONSTANTS:namespace",
+          "docComment": "",
+          "excerptTokens": [],
+          "fileUrlPath": "packages/tldraw/src/index.ts",
+          "releaseTag": "None",
+          "name": "DEFAULT_SHAPE_CONSTANTS",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Variable",
+              "canonicalReference": "@tldraw/tldraw!DEFAULT_SHAPE_CONSTANTS.ARROW_LABEL_FONT_SIZES:var",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ARROW_LABEL_FONT_SIZES: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultSizeStyle",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultSizeStyle:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", number>"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/default-shape-constants.ts",
+              "isReadonly": true,
+              "releaseTag": "Public",
+              "name": "ARROW_LABEL_FONT_SIZES",
+              "variableTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "Variable",
+              "canonicalReference": "@tldraw/tldraw!DEFAULT_SHAPE_CONSTANTS.FONT_FAMILIES:var",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "FONT_FAMILIES: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultFontStyle",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultFontStyle:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", string>"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/default-shape-constants.ts",
+              "isReadonly": true,
+              "releaseTag": "Public",
+              "name": "FONT_FAMILIES",
+              "variableTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "Variable",
+              "canonicalReference": "@tldraw/tldraw!DEFAULT_SHAPE_CONSTANTS.FONT_SIZES:var",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "FONT_SIZES: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultSizeStyle",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultSizeStyle:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", number>"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/default-shape-constants.ts",
+              "isReadonly": true,
+              "releaseTag": "Public",
+              "name": "FONT_SIZES",
+              "variableTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "Variable",
+              "canonicalReference": "@tldraw/tldraw!DEFAULT_SHAPE_CONSTANTS.LABEL_FONT_SIZES:var",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "LABEL_FONT_SIZES: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultSizeStyle",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultSizeStyle:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", number>"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/default-shape-constants.ts",
+              "isReadonly": true,
+              "releaseTag": "Public",
+              "name": "LABEL_FONT_SIZES",
+              "variableTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "Variable",
+              "canonicalReference": "@tldraw/tldraw!DEFAULT_SHAPE_CONSTANTS.STROKE_SIZES:var",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "STROKE_SIZES: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Record",
+                  "canonicalReference": "!Record:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultSizeStyle",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultSizeStyle:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", number>"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/default-shape-constants.ts",
+              "isReadonly": true,
+              "releaseTag": "Public",
+              "name": "STROKE_SIZES",
+              "variableTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "Variable",
+              "canonicalReference": "@tldraw/tldraw!DEFAULT_SHAPE_CONSTANTS.TEXT_PROPS:var",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "TEXT_PROPS: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n    lineHeight: number;\n    fontWeight: string;\n    fontVariant: string;\n    fontStyle: string;\n    padding: string;\n}"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/default-shape-constants.ts",
+              "isReadonly": true,
+              "releaseTag": "Public",
+              "name": "TEXT_PROPS",
+              "variableTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ]
         },
         {
           "kind": "Variable",
@@ -2524,6 +2850,158 @@
             "startIndex": 1,
             "endIndex": 3
           }
+        },
+        {
+          "kind": "Namespace",
+          "canonicalReference": "@tldraw/tldraw!DefaultStyleDefs:namespace",
+          "docComment": "",
+          "excerptTokens": [],
+          "fileUrlPath": "packages/tldraw/src/index.ts",
+          "releaseTag": "None",
+          "name": "DefaultStyleDefs",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Function",
+              "canonicalReference": "@tldraw/tldraw!DefaultStyleDefs.getFillDefForCanvas:function(1)",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "export declare function getFillDefForCanvas(): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLShapeUtilCanvasSvgDef",
+                  "canonicalReference": "@tldraw/editor!TLShapeUtilCanvasSvgDef:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/defaultStyleDefs.tsx",
+              "returnTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [],
+              "name": "getFillDefForCanvas"
+            },
+            {
+              "kind": "Function",
+              "canonicalReference": "@tldraw/tldraw!DefaultStyleDefs.getFillDefForExport:function(1)",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "export declare function getFillDefForExport(fill: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultFillStyle",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultFillStyle:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", theme: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultColorTheme",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultColorTheme:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SvgExportDef",
+                  "canonicalReference": "@tldraw/editor!SvgExportDef:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/defaultStyleDefs.tsx",
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "fill",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "theme",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "getFillDefForExport"
+            },
+            {
+              "kind": "Function",
+              "canonicalReference": "@tldraw/tldraw!DefaultStyleDefs.getFontDefForExport:function(1)",
+              "docComment": "/**\n * @public\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "export declare function getFontDefForExport(fontStyle: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TLDefaultFontStyle",
+                  "canonicalReference": "@tldraw/tlschema!TLDefaultFontStyle:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SvgExportDef",
+                  "canonicalReference": "@tldraw/editor!SvgExportDef:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/defaultStyleDefs.tsx",
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "fontStyle",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "getFontDefForExport"
+            }
+          ]
         },
         {
           "kind": "Variable",
@@ -12279,6 +12757,99 @@
           "name": "removeFrame"
         },
         {
+          "kind": "Function",
+          "canonicalReference": "@tldraw/tldraw!resizeScaled:function(1)",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function resizeScaled(shape: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Extract",
+              "canonicalReference": "!Extract:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "TLShape",
+              "canonicalReference": "@tldraw/tlschema!TLShape:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", {\n    props: {\n        scale: number;\n    };\n}>"
+            },
+            {
+              "kind": "Content",
+              "text": ", { initialBounds, scaleX, scaleY, newPoint, }: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    newPoint: "
+            },
+            {
+              "kind": "Reference",
+              "text": "VecModel",
+              "canonicalReference": "@tldraw/tlschema!VecModel:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    initialBounds: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Box",
+              "canonicalReference": "@tldraw/editor!Box:class"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    scaleX: number;\n    scaleY: number;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    x: number;\n    y: number;\n    props: {\n        scale: number;\n    };\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/resizeScaled.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 12,
+            "endIndex": 13
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "shape",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "{ initialBounds, scaleX, scaleY, newPoint, }",
+              "parameterTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 11
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "resizeScaled"
+        },
+        {
           "kind": "Class",
           "canonicalReference": "@tldraw/tldraw!SelectTool:class",
           "docComment": "/**\n * @public\n */\n",
@@ -20720,6 +21291,181 @@
           "overloadIndex": 1,
           "parameters": [],
           "name": "useDialogs"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@tldraw/tldraw!useEditableText:function(1)",
+          "docComment": "/**\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function useEditableText<T extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "Extract",
+              "canonicalReference": "!Extract:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "TLShape",
+              "canonicalReference": "@tldraw/tlschema!TLShape:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", {\n    props: {\n        text: string;\n    };\n}>"
+            },
+            {
+              "kind": "Content",
+              "text": ">(id: "
+            },
+            {
+              "kind": "Content",
+              "text": "T['id']"
+            },
+            {
+              "kind": "Content",
+              "text": ", type: "
+            },
+            {
+              "kind": "Content",
+              "text": "T['type']"
+            },
+            {
+              "kind": "Content",
+              "text": ", text: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    rInput: "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.RefObject",
+              "canonicalReference": "@types/react!React.RefObject:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "HTMLTextAreaElement",
+              "canonicalReference": "!HTMLTextAreaElement:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">;\n    isEditing: boolean;\n    handleFocus: () => void;\n    handleBlur: () => void;\n    handleKeyDown: (e: "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.KeyboardEvent",
+              "canonicalReference": "@types/react!React.KeyboardEvent:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "HTMLTextAreaElement",
+              "canonicalReference": "!HTMLTextAreaElement:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">) => void;\n    handleChange: (e: "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.ChangeEvent",
+              "canonicalReference": "@types/react!React.ChangeEvent:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "HTMLTextAreaElement",
+              "canonicalReference": "!HTMLTextAreaElement:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ">) => void;\n    handleInputPointerDown: (e: "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.PointerEvent",
+              "canonicalReference": "@types/react!React.PointerEvent:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => void;\n    handleDoubleClick: (e: any) => any;\n    isEmpty: boolean;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "packages/tldraw/src/lib/shapes/shared/useEditableText.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 12,
+            "endIndex": 27
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "id",
+              "parameterTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "type",
+              "parameterTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 9
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "text",
+              "parameterTypeTokenRange": {
+                "startIndex": 10,
+                "endIndex": 11
+              },
+              "isOptional": false
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "useEditableText"
         },
         {
           "kind": "Function",

@@ -1,5 +1,6 @@
 import { Box, TLShape, Vec, VecModel } from '@tldraw/editor'
 
+/** @public */
 export function resizeScaled(
 	shape: Extract<TLShape, { props: { scale: number } }>,
 	{

@@ -10,7 +10,7 @@ function correctSpacesToNbsp(input: string) {
 	return input.replace(/\s/g, '\xa0')
 }
 
-/** Get an SVG element for a text shape. */
+/** @public Get an SVG element for a text shape. */
 export function createTextSvgElementFromSpans(
 	editor: Editor,
 	spans: { text: string; box: BoxModel }[],

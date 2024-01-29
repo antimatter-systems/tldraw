@@ -10,6 +10,7 @@ import { ArrayOfValidator } from '@tldraw/editor';
 import { BaseBoxShapeTool } from '@tldraw/editor';
 import { BaseBoxShapeUtil } from '@tldraw/editor';
 import { Box } from '@tldraw/editor';
+import { BoxModel } from '@tldraw/editor';
 import { Circle2d } from '@tldraw/editor';
 import { CubicSpline2d } from '@tldraw/editor';
 import { DictValidator } from '@tldraw/editor';
@@ -44,6 +45,7 @@ import { SnapPoint } from '@tldraw/editor';
 import { StateNode } from '@tldraw/editor';
 import { StoreSnapshot } from '@tldraw/editor';
 import { SvgExportContext } from '@tldraw/editor';
+import { SvgExportDef } from '@tldraw/editor';
 import { TLAnyShapeUtilConstructor } from '@tldraw/editor';
 import { TLArrowShape } from '@tldraw/editor';
 import { TLAssetId } from '@tldraw/editor';
@@ -52,7 +54,12 @@ import { TLBookmarkShape } from '@tldraw/editor';
 import { TLCancelEvent } from '@tldraw/editor';
 import { TLClickEvent } from '@tldraw/editor';
 import { TLClickEventInfo } from '@tldraw/editor';
+import { TLDefaultColorTheme } from '@tldraw/editor';
+import { TLDefaultFillStyle } from '@tldraw/editor';
+import { TLDefaultFontStyle } from '@tldraw/editor';
+import { TLDefaultHorizontalAlignStyle } from '@tldraw/editor';
 import { TLDefaultSizeStyle } from '@tldraw/editor';
+import { TLDefaultVerticalAlignStyle } from '@tldraw/editor';
 import { TldrawEditorBaseProps } from '@tldraw/editor';
 import { TLDrawShape } from '@tldraw/editor';
 import { TLDrawShapeSegment } from '@tldraw/editor';
@@ -110,6 +117,9 @@ import { Validator } from '@tldraw/editor';
 import { Vec } from '@tldraw/editor';
 import { VecLike } from '@tldraw/editor';
 import { VecModel } from '@tldraw/editor';
+
+// @public (undocumented)
+const ARROW_LABEL_FONT_SIZES: Record<TLDefaultSizeStyle, number>;
 
 // @public (undocumented)
 export class ArrowShapeTool extends StateNode {
@@ -252,6 +262,9 @@ export class BookmarkShapeUtil extends BaseBoxShapeUtil<TLBookmarkShape> {
     static type: "bookmark";
 }
 
+// @internal (undocumented)
+const BOUND_ARROW_OFFSET = 10;
+
 // @public (undocumented)
 export function BreakPointProvider({ forceMobile, children, }: {
     forceMobile?: boolean;
@@ -293,17 +306,63 @@ export const ContextMenu: ({ children }: {
 // @public
 export function copyAs(editor: Editor, ids: TLShapeId[], format?: TLCopyType, opts?: Partial<TLSvgOptions>): Promise<void>;
 
+// @public
+export function createTextSvgElementFromSpans(editor: Editor, spans: {
+    text: string;
+    box: BoxModel;
+}[], opts: {
+    fontSize: number;
+    fontFamily: string;
+    textAlign: TLDefaultHorizontalAlignStyle;
+    verticalTextAlign: TLDefaultVerticalAlignStyle;
+    fontWeight: string;
+    fontStyle: string;
+    lineHeight: number;
+    width: number;
+    height: number;
+    stroke?: string;
+    strokeWidth?: number;
+    fill?: string;
+    padding?: number;
+    offsetX?: number;
+    offsetY?: number;
+}): SVGTextElement;
+
 // @public (undocumented)
 export const DEFAULT_ACCEPTED_IMG_TYPE: string[];
 
 // @public (undocumented)
 export const DEFAULT_ACCEPTED_VID_TYPE: string[];
 
+declare namespace DEFAULT_SHAPE_CONSTANTS {
+    export {
+        TEXT_PROPS,
+        STROKE_SIZES,
+        FONT_SIZES,
+        LABEL_FONT_SIZES,
+        ARROW_LABEL_FONT_SIZES,
+        FONT_FAMILIES,
+        MIN_ARROW_LENGTH,
+        BOUND_ARROW_OFFSET,
+        WAY_TOO_BIG_ARROW_BEND_FACTOR
+    }
+}
+export { DEFAULT_SHAPE_CONSTANTS }
+
 // @public (undocumented)
 export const defaultShapeTools: (typeof ArrowShapeTool | typeof DrawShapeTool | typeof FrameShapeTool | typeof GeoShapeTool | typeof LineShapeTool | typeof NoteShapeTool | typeof TextShapeTool)[];
 
 // @public (undocumented)
 export const defaultShapeUtils: TLAnyShapeUtilConstructor[];
+
+declare namespace DefaultStyleDefs {
+    export {
+        getFontDefForExport,
+        getFillDefForExport,
+        getFillDefForCanvas
+    }
+}
+export { DefaultStyleDefs }
 
 // @public (undocumented)
 export const defaultTools: (typeof EraserTool | typeof HandTool | typeof LaserTool | typeof SelectTool | typeof ZoomTool)[];
@@ -478,6 +537,12 @@ export function findMenuItem(menu: TLUiMenuSchema, path: string[]): TLUiCustomMe
 export function fitFrameToContent(editor: Editor, id: TLShapeId, opts?: {
     padding: number;
 }): void;
+
+// @public (undocumented)
+const FONT_FAMILIES: Record<TLDefaultFontStyle, string>;
+
+// @public (undocumented)
+const FONT_SIZES: Record<TLDefaultSizeStyle, number>;
 
 // @public (undocumented)
 function Footer({ className, children }: {
@@ -691,6 +756,15 @@ export class GeoShapeUtil extends BaseBoxShapeUtil<TLGeoShape> {
 // @public
 export function getEmbedInfo(inputUrl: string): TLEmbedResult;
 
+// @public (undocumented)
+function getFillDefForCanvas(): TLShapeUtilCanvasSvgDef;
+
+// @public (undocumented)
+function getFillDefForExport(fill: TLDefaultFillStyle, theme: TLDefaultColorTheme): SvgExportDef;
+
+// @public (undocumented)
+function getFontDefForExport(fontStyle: TLDefaultFontStyle): SvgExportDef;
+
 // @public
 export function getResizedImageDataUrl(dataURLForImage: string, width: number, height: number, opts?: {
     type?: string | undefined;
@@ -839,6 +913,9 @@ export function isGifAnimated(file: File): Promise<boolean>;
 function Item({ noClose, ...props }: DropdownMenuItemProps): JSX.Element;
 
 // @public (undocumented)
+const LABEL_FONT_SIZES: Record<TLDefaultSizeStyle, number>;
+
+// @public (undocumented)
 export class LaserTool extends StateNode {
     // (undocumented)
     static children: () => (typeof Idle_9 | typeof Lasering)[];
@@ -942,6 +1019,9 @@ export function menuItem(actionItem: TLUiActionItem | TLUiToolItem, opts?: Parti
 
 // @public (undocumented)
 export function menuSubmenu(id: string, label: Exclude<string, TLUiTranslationKey> | TLUiTranslationKey, ...children: (false | TLUiMenuChild)[]): null | TLUiSubMenu;
+
+// @internal (undocumented)
+const MIN_ARROW_LENGTH = 48;
 
 // @public (undocumented)
 export class NoteShapeTool extends StateNode {
@@ -1061,6 +1141,24 @@ function RadioItem({ children, onSelect, ...rest }: DropdownMenuCheckboxItemProp
 export function removeFrame(editor: Editor, ids: TLShapeId[]): void;
 
 // @public (undocumented)
+export function resizeScaled(shape: Extract<TLShape, {
+    props: {
+        scale: number;
+    };
+}>, { initialBounds, scaleX, scaleY, newPoint, }: {
+    newPoint: VecModel;
+    initialBounds: Box;
+    scaleX: number;
+    scaleY: number;
+}): {
+    x: number;
+    y: number;
+    props: {
+        scale: number;
+    };
+};
+
+// @public (undocumented)
 function Root({ id, children, modal, debugOpen, }: {
     id: string;
     children: any;
@@ -1096,6 +1194,9 @@ export function setDefaultUiAssetUrls(urls: TLUiAssetUrls): void;
 export function Spinner(props: React_2.SVGProps<SVGSVGElement>): JSX.Element;
 
 // @public (undocumented)
+const STROKE_SIZES: Record<TLDefaultSizeStyle, number>;
+
+// @public (undocumented)
 function Sub({ id, children }: {
     id: string;
     children: any;
@@ -1114,6 +1215,15 @@ function SubTrigger({ label, 'data-testid': testId, 'data-direction': dataDirect
     'data-testid'?: string;
     'data-direction'?: 'left' | 'right';
 }): JSX.Element;
+
+// @public (undocumented)
+const TEXT_PROPS: {
+    lineHeight: number;
+    fontWeight: string;
+    fontVariant: string;
+    fontStyle: string;
+    padding: string;
+};
 
 // @public (undocumented)
 export class TextShapeTool extends StateNode {
@@ -1875,6 +1985,23 @@ export function useDefaultHelpers(): {
 export function useDialogs(): TLUiDialogsContextType;
 
 // @public (undocumented)
+export function useEditableText<T extends Extract<TLShape, {
+    props: {
+        text: string;
+    };
+}>>(id: T['id'], type: T['type'], text: string): {
+    rInput: React_2.RefObject<HTMLTextAreaElement>;
+    isEditing: boolean;
+    handleFocus: () => void;
+    handleBlur: () => void;
+    handleKeyDown: (e: React_2.KeyboardEvent<HTMLTextAreaElement>) => void;
+    handleChange: (e: React_2.ChangeEvent<HTMLTextAreaElement>) => void;
+    handleInputPointerDown: (e: React_2.PointerEvent) => void;
+    handleDoubleClick: (e: any) => any;
+    isEmpty: boolean;
+};
+
+// @public (undocumented)
 export function useExportAs(): (ids: TLShapeId[], format?: TLExportType) => void;
 
 // @public (undocumented)
@@ -1951,6 +2078,9 @@ export class VideoShapeUtil extends BaseBoxShapeUtil<TLVideoShape> {
     // (undocumented)
     static type: "video";
 }
+
+// @internal (undocumented)
+const WAY_TOO_BIG_ARROW_BEND_FACTOR = 10;
 
 // @public (undocumented)
 export class ZoomTool extends StateNode {

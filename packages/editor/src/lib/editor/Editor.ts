@@ -8678,7 +8678,6 @@ export class Editor extends EventEmitter<TLEventMap> {
 								this._selectedShapeIdsAtPointerDown.forEach((id) => {
 									this._pinchStart[id] = this.getShape(id)!
 								})
-								console.log('selectedShapeIdsAtPointerDown', this._selectedShapeIdsAtPointerDown)
 								// this._pinchStart = this.getShape(this._selectedShapeIdsAtPointerDown[0])!.props.scale
 
 								this._didPinch = true

@@ -8512,7 +8512,20 @@ export class Editor extends EventEmitter<TLEventMap> {
 
 	/** @internal */
 	// private _pinchStart = 1
-	private _pinchStart: Record<string, TLShape> = {}
+	private _pinchStart: {
+		selected: Record<
+			string,
+			{
+				shape: TLShape
+				bounds: Box
+				transform: Mat
+			}
+		>
+		z: number
+	} = {
+		selected: {},
+		z: 1,
+	}
 
 	/** @internal */
 	private _didPinch = false
@@ -8661,10 +8674,11 @@ export class Editor extends EventEmitter<TLEventMap> {
 				// }
 				case 'pinch': {
 					// instead of moving camera, we're going to scale the selected shapes
-					// const selectedShapeIds = this.getSelectedShapeIds()
-					// if (selectedShapeIds.length === 0) return
 					this._updateInputsFromEvent(info)
-
+					const {
+						point: { x, y, z = 1 },
+						delta: { x: dx, y: dy },
+					} = info
 					switch (info.name) {
 						case 'pinch_start': {
 							if (inputs.isPinching) return
@@ -8674,11 +8688,17 @@ export class Editor extends EventEmitter<TLEventMap> {
 								if (!this._selectedShapeIdsAtPointerDown.length) {
 									this._selectedShapeIdsAtPointerDown = this.getSelectedShapeIds()
 								}
-								this._pinchStart = {}
-								this._selectedShapeIdsAtPointerDown.forEach((id) => {
-									this._pinchStart[id] = this.getShape(id)!
-								})
-								// this._pinchStart = this.getShape(this._selectedShapeIdsAtPointerDown[0])!.props.scale
+								this._pinchStart = {
+									selected: this._selectedShapeIdsAtPointerDown.reduce((acc, id) => {
+										acc[id] = {
+											shape: this.getShape(id)!,
+											bounds: this.getShapePageBounds(id)!,
+											transform: this.getShapePageTransform(id)!,
+										}
+										return acc
+									}, {} as Record<string, { shape: TLShape; bounds: Box; transform: Mat }>),
+									z,
+								}
 
 								this._didPinch = true
 
@@ -8691,18 +8711,17 @@ export class Editor extends EventEmitter<TLEventMap> {
 						}
 						case 'pinch': {
 							if (!inputs.isPinching) return
-							const {
-								point: { x, y, z = 1 },
-								delta: { x: dx, y: dy },
-							} = info
+							const deltaZ = z - this._pinchStart.z
+							const zoom = 1 + deltaZ
 							this._selectedShapeIdsAtPointerDown.forEach((id) => {
-								const initialShape = this._pinchStart[id]
+								const { shape, bounds, transform } = this._pinchStart.selected[id]
 								this.resizeShape(
 									id,
-									{ x: z, y: z },
+									{ x: zoom, y: zoom },
 									{
-										initialShape: initialShape,
-										scaleOrigin: initialShape,
+										initialShape: shape,
+										initialBounds: bounds,
+										initialPageTransform: transform,
 									}
 								)
 							})

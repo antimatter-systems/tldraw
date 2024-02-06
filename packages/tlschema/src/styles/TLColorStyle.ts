@@ -2,17 +2,33 @@ import { Expand } from '@tldraw/utils'
 import { T } from '@tldraw/validate'
 import { StyleProp } from './StyleProp'
 
+// const colors = [
+// 	'black',
+// 	'grey',
+// 	'light-violet',
+// 	'violet',
+// 	'blue',
+// 	'light-blue',
+// 	'yellow',
+// 	'orange',
+// 	'green',
+// 	'light-green',
+// 	'light-red',
+// 	'red',
+// ] as const
 const colors = [
 	'black',
 	'grey',
-	'light-violet',
+	'light-grey',
+	'white',
+	'light-violet', // unused
 	'violet',
 	'blue',
 	'light-blue',
+	'light-green', // unused
+	'green',
 	'yellow',
 	'orange',
-	'green',
-	'light-green',
 	'light-red',
 	'red',
 ] as const
@@ -58,6 +74,15 @@ export const DefaultColorThemePalette: {
 				p3: 'color(display-p3 0.972 0.8705 0.05)',
 			},
 		},
+		white: {
+			solid: '#e1e1e1',
+			semi: '#2c3036',
+			pattern: '#989898',
+			highlight: {
+				srgb: '#d2b700',
+				p3: 'color(display-p3 0.8078 0.7225 0.0312)',
+			},
+		},
 		blue: {
 			solid: '#4263eb',
 			semi: '#dce1f8',
@@ -68,21 +93,30 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		green: {
-			solid: '#099268',
-			semi: '#d3e9e3',
-			pattern: '#39a785',
+			solid: '#7BEA1F',
+			semi: '#D3E9E3',
+			pattern: '#9DC37D',
 			highlight: {
-				srgb: '#00ffc8',
-				p3: 'color(display-p3 0.2536 0.984 0.7981)',
+				srgb: '#00FF57',
+				p3: 'color(display-p3 0 1 0.34)',
 			},
 		},
-		grey: {
+		'light-grey': {
 			solid: '#adb5bd',
 			semi: '#eceef0',
 			pattern: '#bcc3c9',
 			highlight: {
 				srgb: '#cbe7f1',
 				p3: 'color(display-p3 0.8163 0.9023 0.9416)',
+			},
+		},
+		grey: {
+			solid: '#93989f',
+			semi: '#33373c',
+			pattern: '#7c8187',
+			highlight: {
+				srgb: '#9cb4cb',
+				p3: 'color(display-p3 0.6299 0.7012 0.7856)',
 			},
 		},
 		'light-blue': {
@@ -104,12 +138,13 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-red': {
-			solid: '#ff8787',
-			semi: '#f4dadb',
-			pattern: '#fe9e9e',
+			// Magenta
+			solid: '#D62E76',
+			semi: '#F4DADB',
+			pattern: '#E5598B',
 			highlight: {
-				srgb: '#ff7fa3',
-				p3: 'color(display-p3 0.9988 0.5301 0.6397)',
+				srgb: '#E5598B',
+				p3: 'color(display-p3 0.9 0.35 0.55)',
 			},
 		},
 		'light-violet': {
@@ -131,6 +166,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		red: {
+			// Ketchup
 			solid: '#e03131',
 			semi: '#f4dadb',
 			pattern: '#e55959',
@@ -140,7 +176,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		violet: {
-			solid: '#ae3ec9',
+			solid: '#9625BF',
 			semi: '#ecdcf2',
 			pattern: '#bd63d3',
 			highlight: {
@@ -149,22 +185,30 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		yellow: {
-			solid: '#ffc078',
-			semi: '#f9f0e6',
-			pattern: '#fecb92',
+			solid: '#FCDA67',
+			semi: '#F9F0E6',
+			pattern: '#FECB92',
 			highlight: {
-				srgb: '#fddd00',
-				p3: 'color(display-p3 0.972 0.8705 0.05)',
+				srgb: '#FDDD00',
+				p3: 'color(display-p3 0.99 0.87 0)',
 			},
 		},
 	},
 	darkMode: {
 		id: 'dark',
-		text: 'hsl(210, 17%, 98%)',
-		background: 'hsl(240, 5%, 8%)',
-		solid: '#010403',
-
+		text: '#f8f9fa',
+		background: '#212529',
+		solid: '#28292e',
 		black: {
+			solid: '#1d1d1d',
+			semi: '#e8e8e8',
+			pattern: '#494949',
+			highlight: {
+				srgb: '#fddd00',
+				p3: 'color(display-p3 0.972 0.8705 0.05)',
+			},
+		},
+		white: {
 			solid: '#e1e1e1',
 			semi: '#2c3036',
 			pattern: '#989898',
@@ -183,12 +227,12 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		green: {
-			solid: '#099268',
-			semi: '#253231',
-			pattern: '#366a53',
+			solid: '#7BEA1F',
+			semi: '#D3E9E3',
+			pattern: '#9DC37D',
 			highlight: {
-				srgb: '#009774',
-				p3: 'color(display-p3 0.0085 0.582 0.4604)',
+				srgb: '#00FF57',
+				p3: 'color(display-p3 0 1 0.34)',
 			},
 		},
 		grey: {
@@ -198,6 +242,15 @@ export const DefaultColorThemePalette: {
 			highlight: {
 				srgb: '#9cb4cb',
 				p3: 'color(display-p3 0.6299 0.7012 0.7856)',
+			},
+		},
+		'light-grey': {
+			solid: '#adb5bd',
+			semi: '#eceef0',
+			pattern: '#bcc3c9',
+			highlight: {
+				srgb: '#cbe7f1',
+				p3: 'color(display-p3 0.8163 0.9023 0.9416)',
 			},
 		},
 		'light-blue': {
@@ -219,12 +272,13 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-red': {
-			solid: '#ff8787',
-			semi: '#3b3235',
-			pattern: '#a56767',
+			// Magenta
+			solid: '#D62E76',
+			semi: '#F4DADB',
+			pattern: '#E5598B',
 			highlight: {
-				srgb: '#db005b',
-				p3: 'color(display-p3 0.7849 0.0585 0.3589)',
+				srgb: '#E5598B',
+				p3: 'color(display-p3 0.9 0.35 0.55)',
 			},
 		},
 		'light-violet': {
@@ -246,7 +300,8 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		red: {
-			solid: '#e03131',
+			// Ketchup
+			solid: '#aa3c37',
 			semi: '#36292b',
 			pattern: '#8f3734',
 			highlight: {
@@ -255,21 +310,21 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		violet: {
-			solid: '#ae3ec9',
-			semi: '#31293c',
-			pattern: '#763a8b',
+			solid: '#9625BF',
+			semi: '#ecdcf2',
+			pattern: '#bd63d3',
 			highlight: {
-				srgb: '#9e00ee',
-				p3: 'color(display-p3 0.5651 0.0079 0.8986)',
+				srgb: '#c77cff',
+				p3: 'color(display-p3 0.7469 0.5089 0.9995)',
 			},
 		},
 		yellow: {
-			solid: '#ffc034',
-			semi: '#3c3934',
-			pattern: '#fecb92',
+			solid: '#FCDA67',
+			semi: '#F9F0E6',
+			pattern: '#FECB92',
 			highlight: {
-				srgb: '#d2b700',
-				p3: 'color(display-p3 0.8078 0.7225 0.0312)',
+				srgb: '#FDDD00',
+				p3: 'color(display-p3 0.99 0.87 0)',
 			},
 		},
 	},

@@ -94,6 +94,7 @@ export function getFillDefForExport(
 	}
 }
 
+/** @public */
 export function getFillDefForCanvas(): TLShapeUtilCanvasSvgDef {
 	return {
 		key: `${DefaultFontStyle.id}:pattern`,

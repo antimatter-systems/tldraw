@@ -1,0 +1,55 @@
+name: Build and release packages on tag
+
+on:
+  create:
+    tags:
+      - 'v*'  # Trigger on any new tag creation
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.18.2
+          cache: 'yarn'
+          cache-dependency-path: 'public-yarn.lock'
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build all projects
+        # the sed pipe makes sure that github annotations come through without
+        # turbo's prefix
+        run: "yarn build | sed -E 's/^.*? ::/::/'"
+
+      - name: Pack public packages
+        run: "yarn lazy pack-tarball | sed -E 's/^.*? ::/::/'"
+
+      - name: Rename and collect tgz files
+        run: |
+          for package in packages/*; do
+            package_name=$(basename "$package")
+            mv "$package/package.tgz" "packages/$package_name.tgz"
+          done
+
+      - name: Create a release and upload assets
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: packages/*.tgz
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref }}
+          body: |
+            Release for tag ${{ github.ref }}
+          draft: false
+          prerelease: false

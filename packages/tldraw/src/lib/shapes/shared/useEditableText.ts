@@ -12,6 +12,7 @@ import {
 import React, { useCallback, useEffect, useRef } from 'react'
 import { INDENT, TextHelpers } from './TextHelpers'
 
+/** @public */
 export function useEditableText<T extends Extract<TLShape, { props: { text: string } }>>(
 	id: T['id'],
 	type: T['type'],

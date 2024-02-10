@@ -66,7 +66,8 @@ export const DefaultColorThemePalette: {
 		solid: '#fcfffe',
 
 		black: {
-			solid: '#1d1d1d',
+			// solid: '#1d1d1d',
+			solid: '#000000',
 			semi: '#e8e8e8',
 			pattern: '#494949',
 			highlight: {
@@ -75,7 +76,8 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		white: {
-			solid: '#e1e1e1',
+			// solid: '#e1e1e1',
+			solid: '#ffffff',
 			semi: '#2c3036',
 			pattern: '#989898',
 			highlight: {
@@ -200,7 +202,8 @@ export const DefaultColorThemePalette: {
 		background: '#212529',
 		solid: '#28292e',
 		black: {
-			solid: '#1d1d1d',
+			// solid: '#1d1d1d',
+			solid: '#000000',
 			semi: '#e8e8e8',
 			pattern: '#494949',
 			highlight: {
@@ -209,7 +212,8 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		white: {
-			solid: '#e1e1e1',
+			// solid: '#e1e1e1',
+			solid: '#ffffff',
 			semi: '#2c3036',
 			pattern: '#989898',
 			highlight: {

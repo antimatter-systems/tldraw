@@ -28,9 +28,12 @@ jobs:
         run: |
           for package in packages/*; do
             package_name=$(basename "$package")
-            mv "$package/package.tgz" "packages/$package_name.tgz"
+            if [ -f "$package/package.tgz" ]; then
+              mv "$package/package.tgz" "packages/$package_name.tgz"
+            else
+              echo "No package.tgz found in $package"
+            fi
           done
-
       - name: Create a release and upload assets
         uses: softprops/action-gh-release@v1
         env:

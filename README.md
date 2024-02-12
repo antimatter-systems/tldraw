@@ -2,9 +2,10 @@
 
 # tldraw Fork
 
-Welcome to the public monorepo for [tldraw](https://github.com/tldraw/tldraw). tldraw is an open source library for creating infinite canvas experiences in React. It's the software behind the digital whiteboard [tldraw.com](https://tldraw.com).
+Welcome to the public monorepo for [tldraw](https://github.com/tldraw/tldraw). tldraw is a library for creating infinite canvas experiences in React. It's the software behind the digital whiteboard [tldraw.com](https://tldraw.com).
 
-👉 Read the docs and learn more at [tldraw.dev](https://tldraw.dev).
+- Read the docs and learn more at [tldraw.dev](https://tldraw.dev).
+- Learn about [our license](https://github.com/tldraw/tldraw#License).
 
 ## Build & Pack Packages
 
@@ -19,6 +20,8 @@ yarn lazy pack-tarball
 ```
 
 ## Local development
+
+The local development server will run our examples app. The basic example will show any changes you've made to the codebase.
 
 To run the local development server, first clone this repo.
 
@@ -58,4 +61,4 @@ Please see our [contributing guide](https://github.com/tldraw/tldraw/blob/main/C
 
 ## Contact
 
-Find us on Twitter at [@tldraw](https://twitter.com/tldraw) or email [hello@tldraw.com](mailto://hello@tldraw.com). You can also [join our discord](https://discord.gg/rhsyWMUJxd) for quick help and support.
+Find us on Twitter at [@tldraw](https://twitter.com/tldraw) or email [sales@tldraw.com](mailto://sales@tldraw.com). You can also [join our discord](https://discord.gg/rhsyWMUJxd) for quick help and support.

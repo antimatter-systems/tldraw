@@ -1,18 +1,21 @@
-import { Tldraw, TLEditorComponents } from '@tldraw/tldraw'
+import { Tldraw, TLEditorComponents, toDomPrecision, useTransform } from '@tldraw/tldraw'
 import '@tldraw/tldraw/tldraw.css'
+import { useRef } from 'react'
+
+// There's a guide at the bottom of this file!
 
 const components: TLEditorComponents = {
 	Brush: function MyBrush({ brush }) {
+		const rSvg = useRef<SVGSVGElement>(null)
+
+		useTransform(rSvg, brush.x, brush.y)
+
+		const w = toDomPrecision(Math.max(1, brush.w))
+		const h = toDomPrecision(Math.max(1, brush.h))
+
 		return (
-			<svg className="tl-overlays__item">
-				<rect
-					className="tl-brush"
-					stroke="red"
-					fill="none"
-					width={Math.max(1, brush.w)}
-					height={Math.max(1, brush.h)}
-					transform={`translate(${brush.x},${brush.y})`}
-				/>
+			<svg ref={rSvg} className="tl-overlays__item">
+				<rect className="tl-brush" stroke="red" fill="none" width={w} height={h} />
 			</svg>
 		)
 	},
@@ -28,7 +31,7 @@ const components: TLEditorComponents = {
 			</svg>
 		)
 	},
-	SnapLine: null,
+	SnapIndicator: null,
 }
 
 export default function CustomComponentsExample() {
@@ -38,3 +41,10 @@ export default function CustomComponentsExample() {
 		</div>
 	)
 }
+
+/* 
+This example shows how to change the default components that tldraw uses on the canvas via the `components` prop.
+Components include things like the background, the grid, handles, spinners etc. In this case we change the box 
+that appears when drag-selecting shapes, and the scribble left behind when using the eraser and laser pointer.
+
+*/

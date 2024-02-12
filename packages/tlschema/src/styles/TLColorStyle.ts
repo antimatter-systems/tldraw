@@ -222,7 +222,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		blue: {
-			solid: '#4156be',
+			solid: '#4263eb',
 			semi: '#262d40',
 			pattern: '#3a4b9e',
 			highlight: {
@@ -240,7 +240,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		grey: {
-			solid: '#93989f',
+			solid: '#9398b0',
 			semi: '#33373c',
 			pattern: '#7c8187',
 			highlight: {
@@ -258,7 +258,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-blue': {
-			solid: '#588fc9',
+			solid: '#4dabf7',
 			semi: '#2a3642',
 			pattern: '#4d7aa9',
 			highlight: {
@@ -267,7 +267,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-green': {
-			solid: '#599f57',
+			solid: '#40c057',
 			semi: '#2a3830',
 			pattern: '#4e874e',
 			highlight: {
@@ -286,7 +286,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		'light-violet': {
-			solid: '#b583c9',
+			solid: '#e599f7',
 			semi: '#383442',
 			pattern: '#9770a9',
 			highlight: {
@@ -295,7 +295,7 @@ export const DefaultColorThemePalette: {
 			},
 		},
 		orange: {
-			solid: '#bf612e',
+			solid: '#f76707',
 			semi: '#3a2e2a',
 			pattern: '#9f552d',
 			highlight: {

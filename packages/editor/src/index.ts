@@ -17,6 +17,7 @@ export {
 	type Atom,
 	type Signal,
 } from '@tldraw/state'
+export type { TLCommandHistoryOptions } from './lib/editor/types/history-types'
 // eslint-disable-next-line local/no-export-star
 export * from '@tldraw/store'
 // eslint-disable-next-line local/no-export-star
@@ -88,9 +89,9 @@ export {
 	type TLSelectionForegroundComponent,
 } from './lib/components/default-components/DefaultSelectionForeground'
 export {
-	DefaultSnapLine,
-	type TLSnapLineComponent,
-} from './lib/components/default-components/DefaultSnapLine'
+	DefaultSnapIndicator,
+	type TLSnapIndicatorComponent,
+} from './lib/components/default-components/DefaultSnapIndictor'
 export {
 	DefaultSpinner,
 	type TLSpinnerComponent,
@@ -154,13 +155,13 @@ export type {
 	TLBeforeCreateHandler,
 	TLBeforeDeleteHandler,
 } from './lib/editor/managers/SideEffectManager'
+export { type BoundsSnapPoint } from './lib/editor/managers/SnapManager/BoundsSnaps'
 export {
 	SnapManager,
-	type GapsSnapLine,
-	type PointsSnapLine,
-	type SnapLine,
-	type SnapPoint,
-} from './lib/editor/managers/SnapManager'
+	type GapsSnapIndicator,
+	type PointsSnapIndicator,
+	type SnapIndicator,
+} from './lib/editor/managers/SnapManager/SnapManager'
 export { BaseBoxShapeUtil, type TLBaseBoxShape } from './lib/editor/shapes/BaseBoxShapeUtil'
 export {
 	ShapeUtil,
@@ -173,7 +174,7 @@ export {
 	type TLOnDoubleClickHandler,
 	type TLOnDragHandler,
 	type TLOnEditEndHandler,
-	type TLOnHandleChangeHandler,
+	type TLOnHandleDragHandler,
 	type TLOnResizeEndHandler,
 	type TLOnResizeHandler,
 	type TLOnResizeStartHandler,
@@ -307,6 +308,7 @@ export {
 	PI,
 	PI2,
 	SIN,
+	angleDistance,
 	approximately,
 	areAnglesCompatible,
 	average,
@@ -314,7 +316,10 @@ export {
 	clamp,
 	clampRadians,
 	clockwiseAngleDist,
+	counterClockwiseAngleDist,
 	degreesToRadians,
+	getArcMeasure,
+	getPointInArcT,
 	getPointOnCircle,
 	getPolygonVertices,
 	isSafeFloat,

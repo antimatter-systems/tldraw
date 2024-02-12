@@ -150,7 +150,7 @@ export {
 	DEFAULT_ACCEPTED_IMG_TYPE,
 	DEFAULT_ACCEPTED_VID_TYPE,
 	containBoxSize,
-	getResizedImageDataUrl,
+	downsizeImage,
 	isGifAnimated,
 } from './lib/utils/assets/assets'
 export { getEmbedInfo } from './lib/utils/embeds/embeds'
@@ -172,11 +172,14 @@ export {
 	serializeTldrawJsonBlob,
 	type TldrawFile,
 } from './lib/utils/tldr/file'
-export { Dialog, DropdownMenu }
-export { DEFAULT_SHAPE_CONSTANTS, DefaultStyleDefs }
 import * as Dialog from './lib/ui/components/primitives/Dialog'
 import * as DropdownMenu from './lib/ui/components/primitives/DropdownMenu'
+
+// N.B. Preserve order of import / export here with this comment.
+// Sometimes this can cause an import problem depending on build setup downstream.
+export { Dialog, DropdownMenu }
 
 // Custom Exports
 import * as DEFAULT_SHAPE_CONSTANTS from './lib/shapes/shared/default-shape-constants'
 import * as DefaultStyleDefs from './lib/shapes/shared/defaultStyleDefs'
+export { DEFAULT_SHAPE_CONSTANTS, DefaultStyleDefs }

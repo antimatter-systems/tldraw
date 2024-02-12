@@ -88,7 +88,7 @@ export const TLUiContextMenuSchemaProvider = track(function TLUiContextMenuSchem
 	const isShapeLocked = onlySelectedShape && editor.isShapeOrAncestorLocked(onlySelectedShape)
 
 	const contextTLUiMenuSchema = useMemo<TLUiMenuSchema>(() => {
-		let contextTLUiMenuSchema: TLUiContextTTLUiMenuSchemaContextType = compactMenuItems([
+		const contextTLUiMenuSchemaWithoutOverrides: TLUiMenuSchema = compactMenuItems([
 			menuGroup(
 				'selection',
 				showAutoSizeToggle && menuItem(actions['toggle-auto-size']),
@@ -205,22 +205,17 @@ export const TLUiContextMenuSchemaProvider = track(function TLUiContextMenuSchem
 			oneSelected && !isShapeLocked && menuGroup('delete-group', menuItem(actions['delete'])),
 		])
 
-		if (overrides) {
-			contextTLUiMenuSchema = overrides(editor, contextTLUiMenuSchema, {
-				actions,
-				oneSelected,
-				twoSelected,
-				threeSelected,
-				showAutoSizeToggle,
-				showUngroup: allowUngroup,
-				onlyFlippableShapeSelected,
-			})
-		}
-
-		return contextTLUiMenuSchema
+		if (!overrides) return contextTLUiMenuSchemaWithoutOverrides
+		return overrides(editor, contextTLUiMenuSchemaWithoutOverrides, {
+			actions,
+			oneSelected,
+			twoSelected,
+			threeSelected,
+			showAutoSizeToggle,
+			showUngroup: allowUngroup,
+			onlyFlippableShapeSelected,
+		})
 	}, [
-		editor,
-		overrides,
 		actions,
 		oneSelected,
 		twoSelected,
@@ -239,6 +234,8 @@ export const TLUiContextMenuSchemaProvider = track(function TLUiContextMenuSchem
 		// oneEmbeddableBookmarkSelected,
 		isTransparentBg,
 		isShapeLocked,
+		editor,
+		overrides,
 	])
 
 	return (

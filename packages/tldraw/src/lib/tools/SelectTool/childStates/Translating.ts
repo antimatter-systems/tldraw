@@ -1,10 +1,10 @@
 import {
+	BoundsSnapPoint,
 	Box,
 	Editor,
 	Mat,
 	MatModel,
 	PageRecordType,
-	SnapPoint,
 	StateNode,
 	TLEventHandlers,
 	TLPointerEventInfo,
@@ -85,7 +85,7 @@ export class Translating extends StateNode {
 		this.parent.setCurrentToolIdMask(undefined)
 		this.selectionSnapshot = {} as any
 		this.snapshot = {} as any
-		this.editor.snaps.clear()
+		this.editor.snaps.clearIndicators()
 		this.editor.updateInstanceState(
 			{ cursor: { type: 'default', rotation: 0 } },
 			{ ephemeral: true }
@@ -213,6 +213,19 @@ export class Translating extends StateNode {
 	protected handleEnd() {
 		const { movingShapes } = this.snapshot
 
+		if (this.isCloning) {
+			const currentAveragePagePoint = Vec.Average(
+				movingShapes.map((s) => this.editor.getShapePageTransform(s.id)!.point())
+			)
+			const offset = Vec.Sub(currentAveragePagePoint, this.selectionSnapshot.averagePagePoint)
+			this.editor.updateInstanceState({
+				duplicateProps: {
+					shapeIds: movingShapes.map((s) => s.id),
+					offset: { x: offset.x, y: offset.y },
+				},
+			})
+		}
+
 		const changes: TLShapePartial[] = []
 
 		movingShapes.forEach((shape) => {
@@ -310,9 +323,9 @@ function getTranslatingSnapshot(editor: Editor) {
 		})
 	)
 
-	let initialSnapPoints: SnapPoint[] = []
+	let initialSnapPoints: BoundsSnapPoint[] = []
 	if (editor.getSelectedShapeIds().length === 1) {
-		initialSnapPoints = editor.snaps.getSnapPointsCache().get(editor.getSelectedShapeIds()[0])!
+		initialSnapPoints = editor.snaps.shapeBounds.getSnapPoints(editor.getSelectedShapeIds()[0])!
 	} else {
 		const selectionPageBounds = editor.getSelectionPageBounds()
 		if (selectionPageBounds) {
@@ -352,7 +365,7 @@ export function moveShapesToPoint({
 	shapeSnapshots: MovingShapeSnapshot[]
 	averagePagePoint: Vec
 	initialSelectionPageBounds: Box
-	initialSelectionSnapPoints: SnapPoint[]
+	initialSelectionSnapPoints: BoundsSnapPoint[]
 }) {
 	const { inputs } = editor
 
@@ -375,14 +388,14 @@ export function moveShapesToPoint({
 	}
 
 	// Provisional snapping
-	editor.snaps.clear()
+	editor.snaps.clearIndicators()
 
 	const shouldSnap =
 		(editor.user.getIsSnapMode() ? !inputs.ctrlKey : inputs.ctrlKey) &&
 		editor.inputs.pointerVelocity.len() < 0.5 // ...and if the user is not dragging fast
 
 	if (shouldSnap) {
-		const { nudge } = editor.snaps.snapTranslate({
+		const { nudge } = editor.snaps.shapeBounds.snapTranslateShapes({
 			dragDelta: delta,
 			initialSelectionPageBounds,
 			lockedAxis: flatten,

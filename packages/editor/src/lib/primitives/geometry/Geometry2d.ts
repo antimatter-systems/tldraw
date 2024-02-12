@@ -6,7 +6,8 @@ export interface Geometry2dOptions {
 	isFilled: boolean
 	isClosed: boolean
 	isLabel?: boolean
-	isSnappable?: boolean
+	debugColor?: string
+	ignore?: boolean
 }
 
 /** @public */
@@ -14,13 +15,15 @@ export abstract class Geometry2d {
 	isFilled = false
 	isClosed = true
 	isLabel = false
-	isSnappable = true
+	debugColor?: string
+	ignore?: boolean
 
 	constructor(opts: Geometry2dOptions) {
 		this.isFilled = opts.isFilled
 		this.isClosed = opts.isClosed
-		this.isSnappable = opts.isSnappable ?? false
 		this.isLabel = opts.isLabel ?? false
+		this.debugColor = opts.debugColor
+		this.ignore = opts.ignore
 	}
 
 	abstract getVertices(): Vec[]

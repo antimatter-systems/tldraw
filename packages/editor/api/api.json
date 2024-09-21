@@ -34647,6 +34647,33 @@
                 }
               ],
               "name": "addExportDef"
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@tldraw/editor!SvgExportContext#convertToDataUri:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly convertToDataUri: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "convertToDataUri",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
             }
           ],
           "extendsTokenRanges": []
@@ -41730,7 +41757,7 @@
             },
             {
               "kind": "Content",
-              "text": ">['preserveAspectRatio'];\n}"
+              "text": ">['preserveAspectRatio'];\n    convertToDataUri?: boolean;\n}"
             },
             {
               "kind": "Content",

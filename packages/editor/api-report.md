@@ -1857,6 +1857,8 @@ export type SVGContainerProps = React_3.HTMLAttributes<SVGElement>;
 // @public (undocumented)
 export interface SvgExportContext {
     addExportDef(def: SvgExportDef): void;
+    // (undocumented)
+    readonly convertToDataUri: boolean;
 }
 
 // @public (undocumented)
@@ -2626,6 +2628,7 @@ export type TLSvgOptions = {
     padding: number;
     darkMode?: boolean;
     preserveAspectRatio: React.SVGAttributes<SVGSVGElement>['preserveAspectRatio'];
+    convertToDataUri?: boolean;
 };
 
 // @public (undocumented)

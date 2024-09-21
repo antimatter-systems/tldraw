@@ -11,4 +11,6 @@ export interface SvgExportContext {
 	 * key. If multiple defs come with the same key, only one will be added.
 	 */
 	addExportDef(def: SvgExportDef): void
+
+	readonly convertToDataUri: boolean
 }

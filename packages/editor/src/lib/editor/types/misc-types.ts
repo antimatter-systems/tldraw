@@ -13,4 +13,5 @@ export type TLSvgOptions = {
 	padding: number
 	darkMode?: boolean
 	preserveAspectRatio: React.SVGAttributes<SVGSVGElement>['preserveAspectRatio']
+	convertToDataUri?: boolean
 }

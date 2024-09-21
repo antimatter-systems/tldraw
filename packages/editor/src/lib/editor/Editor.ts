@@ -8047,6 +8047,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 			background = false,
 			padding = SVG_PADDING,
 			preserveAspectRatio = false,
+			convertToDataUri = true,
 		} = opts
 
 		// todo: we shouldn't depend on the public theme here
@@ -8143,6 +8144,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 				})()
 				exportDefPromisesById.set(def.key, promise)
 			},
+			convertToDataUri,
 		}
 
 		const unorderedShapeElements = (
